@@ -18,8 +18,7 @@ def solution(begin, end):
                 if i // d <= max_num:   
                     max_divisor = i // d # 큰 약수로 수정
                     break
-                
-                elif d <= max_num:
+                else: # 너무 큰 수자체가 되버린경우 보정. 기준을 i//d로 했기때문에 1e7초과 할 경우 업데이트 안되버림.
                     max_divisor = d
                     
         answer.append(max_divisor)
